@@ -1,13 +1,68 @@
 {
-  "prettier.enable": false,
-  "editor.formatOnSave": false,
-  "editor.tabSize": 3,
-  "editor.insertSpaces": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "files.insertFinalNewline": true,
-  "editor.trimAutoWhitespace": true,
-  "files.encoding": "utf8",
-  "eslint.format.enable": true
-}
+   // Enable the flat config support
+   "eslint.experimental.useFlatConfig": true,
+ 
+   // Silent the stylistic rules in you IDE, but still auto fix them
+   "eslint.rules.customizations": [
+     { "rule": "@stylistic/*", "severity": "warn" },
+     { "rule": "style*", "severity": "warn" },
+     { "rule": "*-indent", "severity": "warn" },
+     { "rule": "*-spacing", "severity": "warn" },
+     { "rule": "*-spaces", "severity": "warn" },
+     { "rule": "*-order", "severity": "warn" },
+     { "rule": "*-dangle", "severity": "warn" },
+     { "rule": "*-newline", "severity": "warn" },
+     { "rule": "*quotes", "severity": "warn" },
+     { "rule": "*semi", "severity": "warn" }
+   ],
+ 
+   "eslint.validate": [
+     "javascript",
+     "javascriptreact",
+     "typescript",
+     "typescriptreact",
+     "vue",
+     "html",
+     "markdown",
+     "json",
+     "jsonc",
+     "yaml"
+   ],
+ 
+   /** EDITOR FORMATING */
+   "editor.formatOnSave": false,
+   "editor.insertSpaces": true,
+ 
+   "editor.codeActionsOnSave": {
+     "source.fixAll.eslint": true,
+     "source.fixAll.stylelint": true,
+     "source.organizeImports": false
+   },
+   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+ 
+   /**
+     * STYLELINT SETUP
+     */
+   "stylelint.enable": true,
+   "stylelint.validate": [
+     "css",
+     "scss",
+     "typescript",
+     "typescriptreact"
+   ],
+ 
+   /**
+     * to use lint formatting on save
+     */
+   "eslint.format.enable": true,
+   "prettier.enable": true,
+ 
+   /**
+     * EDITOR UX
+     */
+   "files.insertFinalNewline": true,
+   "editor.trimAutoWhitespace": true,
+   "files.encoding": "utf8",
+   "editor.tabSize": 3
+ }
+ 

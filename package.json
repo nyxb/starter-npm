@@ -13,6 +13,10 @@
   "bugs": {
     "url": "https://github.com/nyxb/ext-name/issues"
   },
+  "workspaces": [
+   "./apps/*",
+   "./packages/*"
+ ],
   "keywords": [],
   "exports": {
     ".": {
@@ -42,12 +46,12 @@
   },
   "devDependencies": {
     "bun-types": "latest",
-    "@nyxb/eslint-config": "^1.0.0-beta.6",
+    "@nyxb/eslint-config": "^1.0.0-beta.15",
     "@nyxb/nyxi": "^0.0.31",
     "unbuild": "^2.0.0",
     "@vitest/coverage-c8": "^0.33.0",
     "dynot": "^0.1.8",
-    "eslint": "^8.50.0",
+    "eslint": "^8.53.0",
     "typescript": "^5.2.2",
     "vitest": "^0.34.6"
   },

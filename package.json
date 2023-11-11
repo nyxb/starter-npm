@@ -36,16 +36,18 @@
   ],
   "scripts": {
     "prepublishOnly": "nyxr build",
-    "build": "buildkarium",
-    "stub": "buildkarium --stub",
+    "build": "unbuild",
+    "stub": "unbuild --stub",
+    "start": "bun src/index.ts",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "test": "run vitest --coverage",
     "typecheck": "tsc --noEmit",
-    "release": "nyxlx changelogen@latest --release && pnpm publish"
+    "release": "bumping && npm publish"
   },
   "devDependencies": {
     "bun-types": "latest",
+    "bumping": "^9.2.1",
     "@nyxb/eslint-config": "^1.0.0-beta.15",
     "@nyxb/nyxi": "^0.0.31",
     "unbuild": "^2.0.0",
